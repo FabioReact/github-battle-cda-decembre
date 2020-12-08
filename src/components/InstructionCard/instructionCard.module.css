@@ -1,0 +1,8 @@
+.instructionCard {
+	font-size: 1.25rem;
+	color: tomato;
+}
+
+.instructionCard img {
+	width: 200px;
+}

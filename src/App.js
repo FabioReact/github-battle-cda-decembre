@@ -1,25 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.css'
+import InstructionCard from "./components/InstructionCard/InstructionCard"
+import LightComponent from "./components/LightComponent/LightComponent"
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <LightComponent light="on" />
+      <p>Mon application</p>
+      <InstructionCard instruction="Enter two Github users" image="user-group.png" />
+      <InstructionCard instruction="Battle" image="battle.png" />
+      <InstructionCard instruction="See the winner" image="trophy.png" />
     </div>
   );
 }
+
+// Les images se trouvent dans le dossier /public
 
 export default App;
