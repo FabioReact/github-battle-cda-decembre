@@ -1,8 +1,12 @@
 .instructionCard {
-	font-size: 1.25rem;
-	color: tomato;
+	/* font-size: 1.25rem;
+	color: tomato; */
+}
+
+.instructionCard > div {
+	display: inline-block;
 }
 
 .instructionCard img {
-	width: 200px;
+	width: 160px;
 }

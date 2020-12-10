@@ -7,13 +7,14 @@ function App() {
   return (
     <div>
       <LightComponent light="on" />
-      <h2>Instructions</h2>
-      <InstructionCard instruction="Enter two Github users" image="user-group.png" />
+      <h2 className="bg-blue-400">Instructions</h2>
+      {/* <InstructionCard instruction="Enter two Github users" image="user-group.png" />
       <InstructionCard instruction="Battle" image="battle.png" />
       <InstructionCard instruction="See the winner" image="trophy.png" />
       <h2>Players</h2>
       <FormBattle number="One" />
-      <FormBattle number="Two" />
+      <FormBattle number="Two" /> */}
+      
     </div>
   );
 }
