@@ -1,10 +1,10 @@
 //rafce
 import NavBar from "../components/NavBar/NavBar"
 
-const Layout = ({ theme, switchTheme, children }) => {
+const Layout = ({ children }) => {
 	return (
 		<>
-			<NavBar theme={theme} switchTheme={switchTheme} />
+			<NavBar />
 			{children}
 			<footer>Mon Footer</footer>
 		</>

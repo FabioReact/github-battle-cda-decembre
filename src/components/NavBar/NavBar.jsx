@@ -4,7 +4,6 @@ import { NavLink } from "react-router-dom"
 import LightComponent from '../LightComponent/LightComponent'
 
 const NavBar = (props) => {
-	const { theme, switchTheme } = props
 	return (
 		<nav>
 			<ul className='flex'>
@@ -19,7 +18,7 @@ const NavBar = (props) => {
 					</NavLink>
 				</li>
 			</ul>
-			<LightComponent theme={theme} switchTheme={switchTheme} />
+			<LightComponent />
 		</nav>
 	)
 }

@@ -1,9 +1,11 @@
-import { useState } from "react"
+import { useState, useContext } from "react"
+import ThemeContext from "../../context/theme-context"
 
 const LightComponent = (props) => {
-	const { theme, switchTheme } = props
+	// Etape 4 (Fin): j'importe le contexte auquel je souhaite avoir accès 
+	const { theme, switchTheme } = useContext(ThemeContext)
 
-	const [image, setImage] = useState("Ampoule")
+	const [image, setImage] = useState("Torche")
 
 	const changeLight = () => {
 		const nextValue = image === "Torche" ? "Ampoule" : "Torche"
