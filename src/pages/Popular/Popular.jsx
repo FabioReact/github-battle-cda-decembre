@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import SelectLanguage from "../../components/SelectLanguage"
 import RepoCard from "../../components/RepoCard"
 // import { withLayout } from "../../hoc/Layout"
@@ -17,13 +17,18 @@ const Popular = () => {
 			})
 	}
 
+	useEffect(() => {
+		getData()
+	}, [])
+
 	return (
 		<div>
-			<button onClick={getData}>Get Repositories</button>
 			<SelectLanguage />
-			{repositories.map((repo, index) => (
-				<RepoCard index={index + 1} key={repo.id} info={repo} />
-			))}
+			<section className="flex flex-wrap">
+				{repositories.map((repo, index) => (
+					<RepoCard index={index + 1} key={repo.id} info={repo} />
+				))}
+			</section>
 		</div>
 	)
 }

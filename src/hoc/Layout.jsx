@@ -1,13 +1,20 @@
 //rafce
 import NavBar from "../components/NavBar/NavBar"
+import { useContext } from "react"
+import ThemeContext from "../context/theme-context"
+// Si vous souhaitez mettre un mode sombre grâce à tailwind, il faudra activer le "darkMode" dans le fichier tailwind.config.js
 
 const Layout = ({ children }) => {
+	// Etape 4: Utilisation de notre contexte
+	const { theme } = useContext(ThemeContext)
 	return (
-		<>
-			<NavBar />
-			{children}
-			<footer>Mon Footer</footer>
-		</>
+		<div className={theme === "dark" ? "dark" : ""}>
+			<div className="dark:bg-gray-900 dark:text-gray-300">
+				<NavBar />
+				{children}
+				<footer>Mon Footer</footer>
+			</div>
+		</div>
 	)
 }
 

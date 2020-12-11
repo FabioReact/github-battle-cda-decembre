@@ -2,9 +2,9 @@ const RepoCard = (props) => {
 	const { info, index } = props
 	const { name, owner: {avatar_url}, forks, open_issues, stargazers_count } = info
 	return (
-		<div>
-			<span>#{index}</span>
-			<img src={avatar_url} alt={`Profile of repository ${name}`}/>
+		<div className="w-48 bg-gray-200 text-center m-5">
+			<span className="text-3xl">#{index}</span>
+			<img className="w-32 mx-auto" src={avatar_url} alt={`Profile of repository ${name}`}/>
 			<div>
 				<em>{name}</em>
 				<ul>

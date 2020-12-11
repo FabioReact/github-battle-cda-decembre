@@ -10,7 +10,7 @@ const LightComponent = (props) => {
 	const changeLight = () => {
 		const nextValue = image === "Torche" ? "Ampoule" : "Torche"
 		setImage(nextValue)
-		switchTheme((theme) => {
+		switchTheme(theme => {
 			return (theme === "light" ? "dark" : "light")
 		})
 	}
