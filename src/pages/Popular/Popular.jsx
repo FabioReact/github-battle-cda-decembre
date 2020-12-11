@@ -1,7 +1,7 @@
 import { useState } from "react"
 import SelectLanguage from "../../components/SelectLanguage"
 import RepoCard from "../../components/RepoCard"
-import { withLayout } from "../../hoc/Layout";
+// import { withLayout } from "../../hoc/Layout"
 
 const Popular = () => {
 	const [repositories, setRepositories] = useState([])
@@ -28,4 +28,5 @@ const Popular = () => {
 	)
 }
 
+// export default withLayout(Popular)
 export default Popular

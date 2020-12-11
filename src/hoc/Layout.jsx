@@ -1,17 +1,19 @@
 //rafce
 import NavBar from "../components/NavBar/NavBar"
 
-const Layout = ({ children }) => {
+const Layout = ({ theme, switchTheme, children }) => {
 	return (
-		<div>
-			<NavBar />
+		<>
+			<NavBar theme={theme} switchTheme={switchTheme} />
 			{children}
 			<footer>Mon Footer</footer>
-		</div>
+		</>
 	)
 }
 
 // Un HOC (High Order Component) est un Composant d'Ordre Supérieur - Cela signifie que cette fonction prendra en paramètre un composant, et retournera un nouveau composant qui aura une fonctionnalité en plus, ou du contenu en plus
+// Cette seconde version sera davantage utile lorsque l'information n'est pas nécessaire à tout les composant de notre application, mais à uniquement certain composants
+// Dans ce cas, le composant pourra être exporter avec withInfo(NomDuComposant)
 const withLayout = (Composant) => {
 	return (props) => (
 		<div>

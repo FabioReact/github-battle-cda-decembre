@@ -1,29 +1,21 @@
-import { Component } from "react"
+import { useState } from "react"
 
-class LightComponent extends Component {
+const LightComponent = (props) => {
+	const { theme, switchTheme } = props
 
-	constructor(props) {
-		super(props)
-		// this.changeLight = this.changeLight.bind(this)
-		this.state = {
-			image: "Torche"
-		}
-	}
-	
+	const [image, setImage] = useState("Ampoule")
 
-	changeLight = () => {
-		// this.state.image = "Ampoule" //INTERDIT!! On ne mute pas directement le state de react!
-		const nextValue = this.state.image === "Torche" ? "Ampoule" : "Torche"
-		this.setState({
-			image: nextValue
+	const changeLight = () => {
+		const nextValue = image === "Torche" ? "Ampoule" : "Torche"
+		setImage(nextValue)
+		switchTheme((theme) => {
+			return (theme === "light" ? "dark" : "light")
 		})
 	}
 
-	render() {
-		return (
-			<div onClick={this.changeLight}>{this.state.image}</div>
-		)
-	}
+	return (
+		<div onClick={changeLight}>{image}</div>
+	)
 }
 
 export default LightComponent
