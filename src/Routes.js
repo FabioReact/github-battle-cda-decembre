@@ -6,9 +6,9 @@ import { Route, Switch } from "react-router-dom"
 import Spinner from "./components/Spinner"
 
 // Avec le lazy loading
-const Popular = lazy(() => import('./pages/Popular'))
-const Battle = lazy(() => import('./pages/Battle'))
-
+const Popular = lazy(() => import("./pages/Popular"))
+const Battle = lazy(() => import("./pages/Battle"))
+const Login = lazy(() => import("./pages/Login"))
 
 const Routes = () => {
 	return (
@@ -16,6 +16,9 @@ const Routes = () => {
 			<Switch>
 				<Route path='/battle'>
 					<Battle />
+				</Route>
+				<Route path='/login'>
+					<Login />
 				</Route>
 				<Route path='/' exact>
 					<Popular />
